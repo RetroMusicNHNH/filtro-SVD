@@ -210,7 +210,7 @@ class FiltroSVD:
             
             print("\n")
             print("PIPELINE COMPLETADO EXITOSAMENTE")
-            print("🎉"*20)
+            print("-"*20)
             
         except Exception as e:
             print(f"\n Error en el pipeline: {str(e)}")
