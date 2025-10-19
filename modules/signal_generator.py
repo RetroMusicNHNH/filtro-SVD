@@ -204,7 +204,7 @@ class SignalGenerator:
             xi: Parámetro de ruido utilizado
             y: Señal generada
         """
-        print(f"📊 Señal ruidosa generada exitosamente:")
+        print(f"Señal ruidosa generada exitosamente:")
         print(f"  • Número de puntos: {n_puntos}")
         print(f"  • Intervalo de evaluación: [{intervalo[0]:.4f}, {intervalo[1]:.4f}]")
         print(f"  • Parámetro de ruido ξ: {xi:.6f}")
@@ -276,7 +276,7 @@ def demo_generacion_senal():
     """
     Función de demostración del generador de señales
     """
-    print("🎯 Demostración del Generador de Señales")
+    print("Demostración del Generador de Señales")
     print("="*50)
     
     # Crear generador
@@ -290,7 +290,7 @@ def demo_generacion_senal():
     
     # Mostrar estadísticas
     stats = generator.obtener_estadisticas_senal(y)
-    print("\n📈 Estadísticas de la señal:")
+    print("\nEstadísticas de la señal:")
     for key, value in stats.items():
         print(f"  {key}: {value:.4f}")
     

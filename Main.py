@@ -54,7 +54,7 @@ class FiltroSVD:
         self.qr_decomp = QRDecomposition()
         self.visualizer = Visualizer(figsize=self.config.FIGSIZE)
         
-        print("✅ Módulos inicializados correctamente")
+        print("Módulos inicializados correctamente")
     
     def ejecutar_tarea_1(self):
         """Ejecuta Tarea 1: Generación de señal ruidosa"""
@@ -78,7 +78,7 @@ class FiltroSVD:
         self.visualizer.graficar_senal_original(t, y, xi)
         self.visualizer.graficar_zoom_regiones(t, y, None)
         
-        print(f"✅ Tarea 1 completada - ξ = {xi:.6f}")
+        print(f"Tarea 1 completada - ξ = {xi:.6f}")
         return t, y, xi
     
     def ejecutar_tarea_2(self):
@@ -98,7 +98,7 @@ class FiltroSVD:
         self.resultados['L'] = self.hankel.L
         self.resultados['K'] = X.shape[1]
         
-        print(f"✅ Matriz de Hankel construida: {X.shape[0]}×{X.shape[1]}")
+        print(f"Matriz de Hankel construida: {X.shape[0]}×{X.shape[1]}")
         return X
     
     def ejecutar_tarea_3(self):
@@ -129,7 +129,7 @@ class FiltroSVD:
         # Visualizar valores singulares
         self.visualizer.graficar_valores_singulares(sigma, r)
         
-        print(f"✅ SVD completada - Rango r = {r}")
+        print(f"SVD completada - Rango r = {r}")
         return U, sigma, Vt, r, Xr
     
     def ejecutar_tarea_4(self):
@@ -161,7 +161,7 @@ class FiltroSVD:
             self.resultados['xi']
         )
         
-        print(f"✅ Reconstrucción completada")
+        print(f"Reconstrucción completada")
         return y_filtrada
     
     def ejecutar_tarea_5(self):
@@ -186,16 +186,16 @@ class FiltroSVD:
         error_h = np.linalg.norm(Q_h @ R_h - X_sample)
         error_g = np.linalg.norm(Q_g @ R_g - X_sample)
         
-        print(f"✅ QR Householder - Error: {error_h:.2e}")
-        print(f"✅ QR Givens - Error: {error_g:.2e}")
+        print(f"QR Householder - Error: {error_h:.2e}")
+        print(f"QR Givens - Error: {error_g:.2e}")
         
         return Q_h, R_h, Q_g, R_g
     
     def ejecutar_pipeline_completo(self):
         """Ejecuta el pipeline completo de filtrado SVD"""
-        print("\n" + "🎯"*20)
+        print("\n" + "*"*20)
         print("INICIANDO PIPELINE COMPLETO DE FILTRADO SVD")
-        print("🎯"*20)
+        print("*"*20)
         
         try:
             # Ejecutar todas las tareas en secuencia
@@ -208,19 +208,19 @@ class FiltroSVD:
             # Resumen final
             self.generar_resumen_final()
             
-            print("\n" + "🎉"*20)
+            print("\n")
             print("PIPELINE COMPLETADO EXITOSAMENTE")
             print("🎉"*20)
             
         except Exception as e:
-            print(f"\n❌ Error en el pipeline: {str(e)}")
+            print(f"\n Error en el pipeline: {str(e)}")
             raise
     
     def generar_resumen_final(self):
         """Genera un resumen final de todos los resultados"""
-        print("\n" + "📊"*20)
+        print("\n")
         print("RESUMEN FINAL DE RESULTADOS")
-        print("📊"*20)
+        print("\n")
         
         print(f"• Señal original: {len(self.resultados['y_original'])} puntos")
         print(f"• Parámetro de ruido ξ: {self.resultados['xi']:.6f}")

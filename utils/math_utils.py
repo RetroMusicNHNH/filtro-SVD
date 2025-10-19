@@ -355,7 +355,7 @@ def validar_dimensiones_compatibles(A: np.ndarray, B: np.ndarray, operacion: str
 
 if __name__ == "__main__":
     # Demostración de las utilidades matemáticas
-    print("📦 Demostración de Utilidades Matemáticas")
+    print("Demostración de Utilidades Matemáticas")
     print("="*50)
     
     # Crear datos de ejemplo

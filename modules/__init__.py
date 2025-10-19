@@ -15,7 +15,7 @@ Módulos disponibles:
 
 __version__ = '1.0.0'
 __author__ = 'RetroMusicNHNH'
-__email__ = 'estudiante@ejemplo.com'
+__email__ = 'luis.reyesgarcia@ucr.ac.cr'
 
 # Importaciones principales para facilitar el uso
 from .signal_generator import SignalGenerator
